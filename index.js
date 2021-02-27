@@ -1,5 +1,6 @@
 // imports
 const express = require('express');
+const routes = require('./routes');
 
 const port = process.env.PORT || 4000;
 const app = express();
@@ -12,6 +13,7 @@ app.use(express.json());
 app.get('/', (req, res) => {
   res.send('hello')
 })
+app.use('/todos', routes.todos)
 
 
 // connection
