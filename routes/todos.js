@@ -1,8 +1,9 @@
 const router = require('express').Router();
 const ctrl = require('../controllers');
 
+
 // routes
-router.get('/', ctrl.todos.index);
+router.get('/', ctrl.todos.index)
 router.get('/:id', ctrl.todos.show);
 router.post('/', ctrl.todos.create);
 router.put('/:id', ctrl.todos.update);

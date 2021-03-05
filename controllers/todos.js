@@ -33,12 +33,10 @@ const destroy = (req, res) => {
         if (err) {
           console.log('Error in games#destroy:', err);
         } else {
-          res.sendStatus(200)
-          console.log(deletedTodo)
+          res.json(deletedTodo)
         }
     });
 };
-
 
 module.exports = {
     index,
